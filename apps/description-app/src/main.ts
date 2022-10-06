@@ -4,16 +4,16 @@
  */
 
 import * as express from 'express';
-import GetProductController from './app/controller/GetProductController';
+import AddDescriptionController from './app/controller/AddDescriptionController';
 
 const app = express();
 
-app.get('/api', (req, res) => {
-  const result = new GetProductController().handle(req);
+app.get('/api', async (req, res) => {
+  const result = await new AddDescriptionController().handle(req);
   res.send(result);
 });
 
-const port = process.env.port || 3333;
+const port = process.env.port || 4445;
 const server = app.listen(port, () => {
   console.log(`Listening at http://localhost:${port}/api`);
 });

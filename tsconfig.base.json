@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@mono-node/common/entity": ["libs/common/entity/src/index.ts"],
+      "@mono-node/http": ["libs/http/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
